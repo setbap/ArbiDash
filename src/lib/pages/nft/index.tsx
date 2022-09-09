@@ -151,6 +151,7 @@ tofuNFT is designed to be easy to use, yet highly optimized for efficient tradin
           spacing={{ base: 1, md: 2, lg: 4 }}
         >
           <DonutChart
+            queryLink={queryLink}
             data={topBasedOnSaleCount.slice(0, 10)}
             nameKey="NFT Collection"
             dataKey="Sales Count"
@@ -159,6 +160,7 @@ tofuNFT is designed to be easy to use, yet highly optimized for efficient tradin
             modelInfo=""
           />
           <DonutChart
+            queryLink={queryLink}
             data={topBasedOnSaleVolume.slice(0, 10)}
             nameKey="NFT Collection"
             dataKey="Sales Volume"
@@ -254,7 +256,7 @@ tofuNFT is designed to be easy to use, yet highly optimized for efficient tradin
             values={coollectionUniqueBuyersVSSellers}
             title="Unique buyers/sellers"
             dataKey="Day"
-            oyLabel="Day"
+            oyLabel=""
             oxLabel=""
             baseSpan={3}
             labels={[
@@ -276,7 +278,7 @@ tofuNFT is designed to be easy to use, yet highly optimized for efficient tradin
             values={salesvolumein$ETH}
             title="Sales volume in $ETH"
             dataKey="Day"
-            oyLabel="Day"
+            oyLabel=""
             oxLabel=""
             baseSpan={3}
             labels={[
