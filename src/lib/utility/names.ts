@@ -1,5 +1,5 @@
 export default {
-  APP_NAME: "ArbiDash",
-  SITE_URL: "ArbiDash.vercel.app",
+  APP_NAME: "ARBIDash",
+  SITE_URL: "ARBIDash.vercel.app",
   BLOCKCHAIN: "Arbitrum",
 };

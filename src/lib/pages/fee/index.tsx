@@ -72,11 +72,11 @@ const Governance = ({
           spacing={{ base: 5, lg: 8 }}
         >
           <StateCardRemoteData
-            url="https://api.coingecko.com/api/v3/simple/price?ids=avalanche-2&vs_currencies=usd"
-            link="https://www.coingecko.com/en/coins/avalanche"
+            url="https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
+            link="https://www.coingecko.com/en/coins/ethereum"
             status="inc"
-            title={"Current AVAX Price (USD)"}
-            getStat={(data) => data["avalanche-2"].usd}
+            title={"Current ETH Price (USD)"}
+            getStat={(data) => data["ethereum"].usd}
           />
           <StatsCard
             stat={totalFeeInfo.data["Average Fee"]}

@@ -290,7 +290,8 @@ const BarGraph = ({
                 <Bar
                   key={index}
                   dataKey={label.key}
-                  fill={`url(#color${index}bargraph)`}
+                  stroke={labels[index].color}
+                  fill={labels[index].color}
                   stackId={isSeprate ? index : dataKey}
                   hide={barProps[label.key] === true}
                   fillOpacity={Number(
