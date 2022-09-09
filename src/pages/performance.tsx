@@ -1,30 +1,34 @@
-import Performance from "lib/pages/performance";
+import Home from "lib/pages/home";
 import {
-  getMostPopularActions,
-  getDailyNewWallets,
-  getDailyTXBotRate,
-  getDailyAddressAndUserInformation,
-} from "lib/requests/performance";
+  getTotalBlockInfo,
+  getDailyTPSInfo,
+  getDailyTPBInfo,
+  getDailyBlockAge,
+  getCurrentNewWallet,
+} from "lib/requests/home";
 export async function getStaticProps() {
   const [
-    mostPopularActions,
-    dailyNewWallets,
-    dailyTXBotRate,
-    dailyAddressAndUserInformation,
+    totalBlockInfo,
+    dailyTPSInfo,
+    dailyTPBInfo,
+    dailyBlockAge,
+    currentNewWallet,
   ] = await Promise.all([
-    getMostPopularActions(),
-    getDailyNewWallets(),
-    getDailyTXBotRate(),
-    getDailyAddressAndUserInformation(),
+    getTotalBlockInfo(),
+    getDailyTPSInfo(),
+    getDailyTPBInfo(),
+    getDailyBlockAge(),
+    getCurrentNewWallet(),
   ]);
   return {
     props: {
-      mostPopularActions,
-      dailyNewWallets,
-      dailyTXBotRate,
-      dailyAddressAndUserInformation,
+      totalBlockInfo,
+      dailyTPSInfo,
+      dailyTPBInfo,
+      dailyBlockAge,
+      currentNewWallet,
     },
     revalidate: 10 * 60,
   };
 }
-export default Performance;
+export default Home;
